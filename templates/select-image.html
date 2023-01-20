@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Select Image</title>
+</head>
+<body>
+    <form method="POST" action="{{ url_for('select_image') }}">
+        <select name="image">
+            {% for image in images %}
+                <option value="{{ image }}">{{ image }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Select">
+    </form>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome</title>
+</head>
+<body>
+    <div>
+        <h1>Welcome, {{ username }}</h1>
+        <form method="POST" enctype="multipart/form-data" action="{{ url_for('upload') }}">
+            <input type="file" name="photo">
+            <input type="submit" value="Upload">
+        </form>
+        <a href="{{ url_for('select_image') }}">Select Image</a>
+    </div>
+</body>
+</html>
